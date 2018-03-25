@@ -1,0 +1,19 @@
+<div class="listing">
+    <div class="listing__card card">
+        <div class="listing__image-container">
+            <div class="listing__image" style="background: url(<%= @listing['primary_photo_url'] %>); background-size: cover;"></div>
+        </div>
+        <div class="listing__info-container card-body">
+            <h5 class="listing__info">
+                <%= "#{@listing['year']} #{@listing['make']} #{@listing['model']}" %>
+            </h5>
+            <h5 class="listing__info">
+                <%= @listing['price'] %>
+            </h5>
+        </div>
+        <div class="listing__details">
+            <p>Mileage: <%= @listing['mileage_humanized'] %></p>
+            <p>Location: <%= "#{@listing['city']}, #{@listing['state']}" %></p>
+        </div>
+    </div>
+</div>
