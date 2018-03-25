@@ -21,7 +21,7 @@ rake db:migrate
 
 Run: `touch .env`
 
-Add: `AUTOLIST_API_KEY=<you API key>` to your `.env` file
+Add: `AUTOLIST_API_KEY=<your API key>` to your `.env` file
 
 **That's it!**
 
