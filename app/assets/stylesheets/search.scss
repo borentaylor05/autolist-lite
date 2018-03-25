@@ -1,0 +1,77 @@
+// Place all the styles related to the search controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "./functions";
+@import "./breakpoints";
+
+.search-results {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: spacing(5) 0;
+
+    &__title {
+        font-size: 40px;
+        margin-bottom: spacing(5);
+    }
+
+    &__link {
+        width: 100%;
+        color: black;
+
+        &:hover {
+            color: black;
+            text-decoration: none;
+        }
+    }
+
+    &__image-container {
+        height: 240px;
+        overflow: hidden;
+        padding-top: 53%;
+        position: relative;
+        width: 100%;
+    }
+
+    &__image {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        flex-basis: 50%;
+        flex: 1 0 auto;
+        position: absolute;
+        top: -60px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+    &__card {
+        width: 100%;
+        margin-bottom: spacing(3);
+    }
+
+    &__info-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info {
+        margin-bottom: 0;
+    }
+
+    &__page-container {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+    }
+
+    &__page-button {
+        width: 100px;
+    }
+}

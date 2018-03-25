@@ -1,0 +1,31 @@
+<div class="search-results">
+	<h1 class="search-results__title"><%= @title %></h1>
+	<% @search_results.each do |result| %>
+		<%= link_to("/listings/#{result['vin']}", class: 'search-results__link') do %>
+			<div class="search-results__card card">
+				<div class="search-results__image-container">
+					<div class="search-results__image" style="background: url(<%= result['primary_photo_url'] %>); background-size: cover;"></div>
+				</div>
+				<div class="search-results__info-container card-body">
+					<h5 class="search-results__info">
+						<%= "#{result['year']} #{result['make']} #{result['model']}" %>
+					</h5>
+					<h5 class="search-results__info">
+						<%= result['price_mobile'] %>
+					</h5>
+				</div>
+			</div>
+		<% end %>
+	<% end %>
+
+	<div class="search-results__page-container">
+		<div class="search-results__page">
+			<% if @previous_page %>
+				<%= link_to('Previous', @previous_page, class: "btn btn-primary search-results__page-button") %>
+			<% end %>
+		</div>
+		<div class="search-results__page">
+			<%= link_to('Next', @next_page, class: "btn btn-primary search-results__page-button") %>
+		</div>
+	</div>
+</div>
