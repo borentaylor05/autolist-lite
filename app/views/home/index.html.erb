@@ -1,0 +1,28 @@
+<div class="home">
+  <div class="home__jumbotron jumbotron">
+    <h1 class="home__title"><%= @title %></h1>
+    <h4 class="home__subtitle"><%= @subtitle %></h4>
+
+    
+    <%= form_tag("/results", method: "get", class: "home__search") do %>
+      <div class="input-group home__select home__select--min">
+        
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="min-price">Min Price</label>
+        </div>
+        
+        <%= select_tag 'min_price', options_for_select(@min_prices.collect{ |price| [number_to_currency(price), price] }), class: "custom-select" %>
+      </div>
+
+      <div class="input-group home__select home__select--max">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="max-price">Max Price</label>
+        </div>
+        
+          <%= select_tag 'max_price', options_for_select(@max_prices.collect{ |price| [number_to_currency(price), price] }), class: "custom-select" %>
+      </div>
+
+      <%= submit_tag("Search", class: "home__search-button btn btn-lg btn-primary") %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "./functions";
+
+.home {
+    text-align: center;
+
+    &__jumbotron {
+        text-align: center;
+    }
+
+    &__search {
+        margin-top: spacing(4);
+        justify-content: center;
+    }
+
+    &__select {
+        padding: spacing(3) 0;
+    }
+
+    &__search-button {
+        margin-top: spacing(3);
+    }
+}
